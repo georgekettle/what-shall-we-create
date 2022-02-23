@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="cabin-banner" style='background-image: url("<%= @cabin.cover_image %>")'>
+  <p><%= @cabin.location %></p>
+  <h1><%= @cabin.name.capitalize %></h1>
+  <p><%= @cabin.description %></p>
+</div>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cabin.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @cabin.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cabin.description %>
+</p>
+
+<p>
+  <strong>Cover image:</strong>
+  <%= @cabin.cover_image %>
+</p>
+
+<%= link_to 'Edit', edit_cabin_path(@cabin) %> |
+<%= link_to 'Back', cabins_path %> | 
+<%= link_to 'Add a photo', new_cabin_photo_path(@cabin) %>
+
+
+<h4>User photos (IRL)</h4>
+<% @cabin.photos.each do |photo| %>
+  <%= render 'photos/photo', photo: photo %>
+<% end %>
+

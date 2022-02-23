@@ -1,0 +1,19 @@
+// Place all the styles related to the Cabins controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.cabin-banner {
+    justify-content: center;
+    height: 500px;
+    border-radius: 20px;
+    margin: 10px;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+
+    p {
+        max-width: 350px;
+    }
+}

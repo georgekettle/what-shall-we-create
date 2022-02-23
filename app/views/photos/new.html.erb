@@ -1,0 +1,9 @@
+<h1>Add a photo to <%= @cabin.name %></h1>
+
+<%= simple_form_for([@cabin, @photo]) do |f| %>
+    <%= f.input :image %>
+    <%= f.input :user %>
+    <%= f.input :comment %>
+    <%= f.input :rating, collection: (0..5).to_a %>
+    <%= f.submit %>
+<% end %>
